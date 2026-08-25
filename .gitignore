@@ -11,3 +11,7 @@ $RECYCLE.BIN/
 .vscode/
 .idea/
 *.swp
+
+# Página do fornecedor salva do AliExpress — fonte de consulta, não vai pro site
+assets/*AliExpress.html
+assets/*AliExpress_files/

@@ -34,8 +34,8 @@ const PRODUCT = {
      2. SEO — título da aba, descrição do Google e imagem de compartilhamento
   ------------------------------------------------------------------ */
   seo: {
-    titulo: 'Escova 3 em 1 para Cães e Gatos | UivoPets',
-    descricao: 'Escova 3 em 1 que remove pelos soltos, massageia e limpa com um clique. Entrega para todo o Brasil, compra 100% segura e troca fácil.',
+    titulo: 'Escova a Vapor 3 em 1 para Cães e Gatos | UivoPets',
+    descricao: 'Escova a vapor 3 em 1 que solta o pelo morto, escova e massageia no mesmo movimento — sem nuvem de pelo pela casa. Envio do Brasil, compra 100% segura e troca fácil.',
     imagem: 'assets/placeholder-produto.svg'
   },
 
@@ -78,13 +78,13 @@ const PRODUCT = {
      chevron, whatsapp, email, instagram, facebook, tiktok
   ------------------------------------------------------------------ */
   hero: {
-    badge: 'Escova 3 em 1',
+    badge: 'Escova a vapor 3 em 1',
     badgeIcone: 'uivo',       // ícone da tarja: 'uivo', 'pata', 'brilho'…
-    titulo: 'Menos pelos.<br>Mais <span class="destaque">amor.</span> <i data-icone="coracao" class="icone-inline"></i>',
-    texto: 'Escova 3 em 1 para cães e gatos: <strong>remove pelos, massageia e limpa</strong> com praticidade.',
+    titulo: 'O pelo sai.<br>E não <span class="destaque">voa.</span> <i data-icone="coracao" class="icone-inline"></i>',
+    texto: 'Escova a vapor 3 em 1 para cães e gatos: o <strong>vapor solta o pelo morto</strong> enquanto você escova e massageia — o pelo para na escova, não no sofá.',
     imagem: {
       src: 'assets/placeholder-produto.svg',
-      alt: 'Escova 3 em 1 UivoPets para cães e gatos'
+      alt: 'Escova a vapor 3 em 1 UivoPets para cães e gatos'
     },
 
     // Vídeo curto em loop do produto em uso (grave você mesmo — 6 a 10s,
@@ -99,9 +99,9 @@ const PRODUCT = {
     selo: 'Compra 100% segura e garantida',
 
     beneficios: [
-      { icone: 'escova', texto: 'Remove<br>pelos soltos' },
-      { icone: 'ondas', texto: 'Massageia<br>com conforto' },
-      { icone: 'brilho', texto: 'Limpeza<br>profunda' }
+      { icone: 'ondas', texto: 'Vapor que<br>solta o pelo' },
+      { icone: 'escova', texto: 'Escova e<br>recolhe' },
+      { icone: 'brilho', texto: 'Massagem<br>que acalma' }
     ]
   },
 
@@ -109,7 +109,7 @@ const PRODUCT = {
      6. FAIXA DE CONFIANÇA (logo abaixo do hero)
   ------------------------------------------------------------------ */
   confianca: [
-    { icone: 'caminhao', titulo: 'Entrega rápida', texto: 'Para todo o Brasil' },
+    { icone: 'caminhao', titulo: 'Envio do Brasil', texto: 'Sem espera de importação' },
     { icone: 'escudo', titulo: 'Pagamento seguro', texto: 'Ambiente protegido' },
     { icone: 'troca', titulo: 'Troca fácil', texto: 'Até 7 dias após o recebimento' }
   ],
@@ -120,28 +120,36 @@ const PRODUCT = {
      Só anuncie um preço "de" que você realmente praticou antes (CDC).
   ------------------------------------------------------------------ */
   preco: {
-    etiqueta: 'Preço especial',
-    desconto: '-40%',
-    de: 'De R$ 99,90',
+    etiqueta: 'Preço de lançamento',
+    // "de" e "desconto" vazios de propósito: você ainda não praticou um preço
+    // anterior. Só preencha depois de ter vendido mais caro de verdade (CDC).
+    desconto: '',
+    de: '',
     moeda: 'R$',
-    por: '59,90',
-    parcelamento: 'ou <strong>6x</strong> de <strong>R$ 9,98</strong>',
+    por: '45,99',
+    parcelamento: 'ou <strong>3x</strong> de <strong>R$ 15,33</strong> sem juros',
     cta: 'Comprar agora',
     selo: 'Ambiente 100% seguro'
   },
 
   /* ------------------------------------------------------------------
      8. AVALIAÇÕES
-     ATENÇÃO: os depoimentos abaixo são exemplos. Troque por avaliações
-     reais antes de publicar — avaliação inventada é infração ao CDC e
-     derruba anúncios no Meta Ads.
+     ATENÇÃO — LEIA ANTES DE PUBLICAR: a nota, o total e os três depoimentos
+     abaixo foram copiados LITERALMENTE do anúncio do fornecedor no AliExpress
+     (Cisne 168 Store). São avaliações reais de compradores reais, mas NÃO são
+     avaliações da UivoPets. Exibi-las como se fossem da sua loja é propaganda
+     enganosa (CDC art. 37) e derruba conta no Meta Ads.
+     Decida uma das três saídas antes de subir a página:
+       a) apagar a seção até você ter avaliações próprias;
+       b) manter e deixar explícito que são avaliações do produto, não da loja;
+       c) substituir pelas suas assim que as primeiras vendas chegarem.
   ------------------------------------------------------------------ */
   avaliacoes: {
     eyebrow: 'Avaliações',
     titulo: `O que dizem quem já <span class="destaque">comprou</span>`,
-    nota: 4.8,
+    nota: 4.7,
     notaMaxima: 'de 5',
-    base: 'Baseado em 1.256 avaliações',
+    base: 'Baseado em 221 avaliações do produto',
     verMais: 'Ver mais avaliações',
 
     fotos: [
@@ -150,10 +158,13 @@ const PRODUCT = {
       { src: 'assets/placeholder-avaliacao.svg', alt: 'Pet escovado com a escova UivoPets' }
     ],
 
+    // Textos LITERAIS do anúncio de origem — não reescreva, não embeleze.
+    // A nota individual de cada um não veio na página salva; ficaram como 5
+    // porque os três textos são positivos. Confira no anúncio antes de publicar.
     lista: [
-      { nota: 5, texto: 'Chegou antes do prazo e funcionou de primeira. Meu golden solta muito pelo e a escova recolheu tudo.', autor: 'Camila R.', verificado: true },
-      { nota: 5, texto: 'Meu gato odiava escova e agora fica quietinho. As cerdas são bem macias mesmo.', autor: 'Rafael M.', verificado: true },
-      { nota: 4, texto: 'Boa qualidade pelo preço. O botão de limpar facilita muito o dia a dia.', autor: 'Juliana P.', verificado: true }
+      { nota: 5, texto: 'O produto chegou bem rápido, veio desmontado a parte das cerdas, mas consegui colocar no lugar, já testei e realmente sai um vaporzinho, o que vai ajudar bastante na limpeza dos meus felinos. Recomendo o produto, muito bom.', autor: 'Comprador verificado', verificado: true },
+      { nota: 5, texto: 'Gostei muito, minhas gatinhas deixaram escovar de boa, amei', autor: 'B***r', verificado: true },
+      { nota: 5, texto: 'Chegou direitinho, minha esposa gostou', autor: 'Comprador verificado', verificado: true }
     ]
   },
 
@@ -162,23 +173,23 @@ const PRODUCT = {
   ------------------------------------------------------------------ */
   funcionalidades: {
     eyebrow: 'Como funciona',
-    titulo: '<span class="destaque">3 funções</span> em 1 só escova',
-    apoio: 'Um só produto resolve a escovação, a massagem e a limpeza depois.',
+    titulo: '<span class="destaque">3 funções</span> no mesmo movimento',
+    apoio: 'Vapor, escovação e massagem de uma vez só — a higiene do seu pet em um passo, não em três.',
     itens: [
       {
-        imagem: { src: 'assets/placeholder-funcao.svg', alt: 'Escova removendo pelos soltos de um cachorro' },
-        titulo: 'Remove pelos soltos',
-        texto: 'Recolhe com eficiência os pelos mortos e soltos.'
+        imagem: { src: 'assets/placeholder-funcao.svg', alt: 'Vapor saindo da escova sobre a pelagem do pet' },
+        titulo: 'Vapor que solta o pelo',
+        texto: 'O vapor umedece a pelagem enquanto você escova. O pelo morto se desprende com mais facilidade e fica preso na escova, em vez de levantar pela casa.'
       },
       {
-        imagem: { src: 'assets/placeholder-funcao.svg', alt: 'Escova massageando a pele do pet' },
-        titulo: 'Massageia com conforto',
-        texto: 'Cerdas macias que ativam a circulação e relaxam seu pet.'
+        imagem: { src: 'assets/placeholder-funcao.svg', alt: 'Escova recolhendo pelos soltos de um cachorro' },
+        titulo: 'Escova e recolhe',
+        texto: 'As cerdas passam pela pelagem recolhendo o que já estava solto, em cães e gatos, do focinho ao rabo.'
       },
       {
-        imagem: { src: 'assets/placeholder-funcao.svg', alt: 'Botão de limpeza da escova sendo acionado' },
-        titulo: 'Limpeza fácil',
-        texto: 'Com um clique, os pelos saem todos de uma vez.'
+        imagem: { src: 'assets/placeholder-funcao.svg', alt: 'Pet relaxado durante a escovação' },
+        titulo: 'Massagem que acalma',
+        texto: 'O movimento sobre a pele vira massagem. Nas avaliações do produto, tutores de gato contam que os bichos deixaram escovar sem briga.'
       }
     ]
   },
@@ -201,16 +212,22 @@ const PRODUCT = {
     titulo: 'Perguntas frequentes',
     itens: [
       {
-        pergunta: 'A escova funciona em todos os tipos de pelo?',
-        resposta: 'Sim. As cerdas foram desenhadas para pelos curtos, médios e longos, em cães e gatos. Para pelos muito emaranhados, escove em movimentos curtos antes de passar a escova por toda a extensão.'
+        pergunta: 'A escova serve para cães e para gatos?',
+        resposta: 'Serve para os dois. Nas avaliações do produto aparecem tutores de cachorro e de gato, e "aprovado pelo gato" é uma das marcações mais repetidas. Com gato, faça sessões curtas nas primeiras vezes até ele se acostumar com o som.'
       },
       {
-        pergunta: 'Como faço para limpar a escova?',
-        resposta: 'Basta apertar o botão na parte de trás: as cerdas se recolhem e todo o pelo sai de uma vez, sem precisar puxar com a mão.'
+        pergunta: 'A escova vem montada?',
+        resposta: 'Em parte dos envios a peça das cerdas vem separada e você encaixa antes do primeiro uso. É um encaixe simples, sem ferramenta nenhuma. Se ficar em dúvida, chama a gente no WhatsApp que a gente te mostra.'
+      },
+      {
+        pergunta: 'Como uso o vapor pela primeira vez?',
+        resposta: 'Ligue a escova longe do seu pet primeiro, só para ele ouvir o som. Depois comece pelas costas, em movimentos curtos, e vá avançando conforme ele relaxa. A maioria se acostuma logo na primeira escovação.'
       },
       {
         pergunta: 'Em quanto tempo recebo meu pedido?',
-        resposta: 'O prazo médio é de 5 a 12 dias úteis para todo o Brasil. Você recebe o código de rastreio por e-mail assim que o pedido é enviado.'
+        // TODO: troque pelo prazo real do seu envio. O produto já está em
+        // estoque no Brasil, então não há espera de importação.
+        resposta: 'O produto sai do Brasil, sem espera de importação. O prazo médio é de 3 a 8 dias úteis, conforme a sua região. Você recebe o código de rastreio por e-mail assim que o pedido é enviado.'
       },
       {
         pergunta: 'Posso trocar ou devolver?',
@@ -218,7 +235,7 @@ const PRODUCT = {
       },
       {
         pergunta: 'Quais formas de pagamento vocês aceitam?',
-        resposta: 'Cartão de crédito em até 6x, Pix e boleto bancário. O pagamento é processado em ambiente seguro pela Nuvemshop.'
+        resposta: 'Cartão de crédito em até 3x sem juros, Pix e boleto bancário. O pagamento é processado em ambiente seguro pela Nuvemshop.'
       }
     ]
   },
@@ -239,8 +256,12 @@ const PRODUCT = {
   opcoes: {
     ctaFixoMobile: true,      // barra de compra fixa no rodapé do celular
     animacoes: true,          // seções aparecem suavemente ao rolar
-    dadosEstruturados: true   // marcação de produto para o Google
-                              // (só deixe true com preço e avaliações REAIS)
+    dadosEstruturados: false  // marcação de produto para o Google.
+                              // DESLIGADO de propósito: ligado, ele publicaria
+                              // no Google a nota 4,7/221 avaliações como se
+                              // fossem da UivoPets. O Google pune rich snippet
+                              // de avaliação que não é da loja. Ligue quando
+                              // as avaliações forem suas.
   }
 };
 
