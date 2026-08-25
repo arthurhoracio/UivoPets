@@ -54,15 +54,16 @@ const PRODUCT = {
   },
 
   /* ------------------------------------------------------------------
-     4. INTEGRAÇÃO COM A NUVEMSHOP
-     urlCheckout: cole aqui o link do produto/carrinho da sua Nuvemshop.
-     Enquanto o script do Buy Button não estiver instalado, todos os botões
-     "Comprar agora" levam para esse link. Deixe "" se for usar só o script.
+     4. CHECKOUT — YAMPI
+     urlCheckout: o link do checkout da Yampi. Os TRÊS botões "Comprar agora"
+     da página (hero, bloco de preço e barra fixa do celular) leem daqui.
+     Se o link do produto mudar na Yampi, é só este campo que muda.
      urlCarrinho: para onde o ícone de carrinho do topo leva. Vazio = rola
-     a página até o bloco de preço.
+     a página até o bloco de preço — o certo para página de produto único.
+     Se quiser mandar direto pro checkout, repita o link acima.
   ------------------------------------------------------------------ */
   integracao: {
-    urlCheckout: '',
+    urlCheckout: 'https://uivopets.pay.yampi.com.br/r/4YRIH7WDSD',
     urlCarrinho: ''
   },
 
@@ -235,7 +236,10 @@ const PRODUCT = {
       },
       {
         pergunta: 'Quais formas de pagamento vocês aceitam?',
-        resposta: 'Cartão de crédito em até 3x sem juros, Pix e boleto bancário. O pagamento é processado em ambiente seguro pela Nuvemshop.'
+        // TODO: confira no painel da Yampi quais formas você realmente
+        // habilitou e em quantas parcelas. O texto tem que bater com o
+        // checkout — prometer 3x e entregar 1x gera chargeback e reclamação.
+        resposta: 'Cartão de crédito em até 3x sem juros, Pix e boleto bancário. O pagamento é processado em ambiente seguro pela Yampi.'
       }
     ]
   },
@@ -640,11 +644,9 @@ const PRODUCT = {
 
   /* -------------------------------------------------------------------
      BOTÕES "COMPRAR AGORA"
-     Todos têm a classe .btn-comprar.
-     • Se o script do Buy Button da Nuvemshop estiver instalado, ele assume
-       o controle e este código só registra o evento de pixel.
-     • Se não, e você preencheu integracao.urlCheckout, o botão leva
-       direto para o link da sua loja.
+     Todos têm a classe .btn-comprar — hero, bloco de preço e barra fixa
+     do celular. O clique registra o evento de pixel e manda o cliente
+     para integracao.urlCheckout, que é o checkout da Yampi.
   ------------------------------------------------------------------- */
   function ligarBotoesCompra() {
     $$('.btn-comprar').forEach((botao) => {
@@ -745,7 +747,7 @@ const PRODUCT = {
 
   iniciar();
 
-  /* API pública — útil para o Buy Button atualizar o contador do carrinho:
+  /* API pública — se um dia a página ganhar um carrinho com contador no topo:
      UivoPets.setCarrinho(2)  */
   window.UivoPets = {
     config: PRODUCT,

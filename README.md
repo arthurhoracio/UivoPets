@@ -1,7 +1,7 @@
 # UivoPets — Landing page
 
 Página estática de produto único, mobile-first, pronta para receber tráfego pago
-e mandar o cliente para o checkout da Nuvemshop.
+e mandar o cliente para o checkout da Yampi.
 
 ```
 index.html     estrutura (não tem texto de produto aqui)
@@ -121,45 +121,41 @@ carregar mais rápido:
 
 ---
 
-## 5. Nuvemshop — app "Buy Button"
+## 5. Checkout — Yampi
 
-Existem duas formas de conectar. Pode usar as duas juntas.
+O checkout é só um link. Não tem app para instalar nem script para colar.
 
-### Forma rápida (funciona hoje)
-
-No `PRODUCT.integracao`, preencha o link do produto na sua Nuvemshop:
+Os **três** botões "Comprar agora" da página — hero, bloco de preço e barra fixa
+do celular — leem todos o mesmo campo no `PRODUCT.integracao`:
 
 ```js
 integracao: {
-  urlCheckout: 'https://sualoja.lojavirtualnuvem.com.br/produtos/escova-3-em-1/',
+  urlCheckout: 'https://uivopets.pay.yampi.com.br/r/4YRIH7WDSD',
   urlCarrinho: ''
 }
 ```
 
-Pronto: todos os botões "Comprar agora" já levam para lá.
+Se o link do produto mudar na Yampi, **é só esse campo que muda**. Não encoste
+no HTML: nenhum botão tem link escrito nele.
 
-### Forma oficial (app Buy Button)
+`urlCarrinho` é para onde o ícone de carrinho do topo leva. Vazio, ele rola a
+página até o bloco de preço — o comportamento certo para uma página de produto
+único, já que não existe carrinho de verdade aqui. Se preferir mandar direto
+para o checkout, repita o link da Yampi nesse campo.
 
-1. Instale o app **Buy Button** no painel da Nuvemshop e gere o snippet do produto.
-2. Abra o `index.html` e vá até o final do arquivo — tem um bloco de comentário
-   grande escrito **`>>> COLE AQUI O SCRIPT DO APP "BUY BUTTON" DA NUVEMSHOP <<<`**,
-   logo antes de `<script src="script.js"></script>`.
-3. Cole o snippet exatamente ali.
-
-Todos os botões de compra da página têm a classe **`.btn-comprar`** — hero, bloco
-de preço e barra fixa do celular. É essa classe que você aponta na configuração
-do app, se ele pedir um seletor.
-
-Se o app mexer no carrinho, atualize o contador do topo com:
-
-```js
-UivoPets.setCarrinho(2);
-```
+Todos os botões de compra têm a classe **`.btn-comprar`**, caso alguma
+ferramenta te peça um seletor.
 
 E, se quiser disparar algo próprio no clique, a página emite um evento:
 
 ```js
 document.addEventListener('uivopets:comprar', () => { /* seu código */ });
+```
+
+Se um dia a página ganhar um carrinho com contador no topo:
+
+```js
+UivoPets.setCarrinho(2);
 ```
 
 ### Pixel do Meta / Google
