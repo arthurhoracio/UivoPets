@@ -81,11 +81,11 @@ const PRODUCT = {
   hero: {
     badge: 'Escova a vapor 3 em 1',
     badgeIcone: 'uivo',       // ícone da tarja: 'uivo', 'pata', 'brilho'…
-    titulo: 'O pelo sai.<br>E não <span class="destaque">voa.</span> <i data-icone="coracao" class="icone-inline"></i>',
+    titulo: 'Chega de pelo<br>em <span class="destaque">todo canto.</span>',
     texto: 'Escova a vapor 3 em 1 para cães e gatos: o <strong>vapor solta o pelo morto</strong> enquanto você escova e massageia — o pelo para na escova, não no sofá.',
     imagem: {
-      src: 'assets/placeholder-produto.svg',
-      alt: 'Escova a vapor 3 em 1 UivoPets para cães e gatos'
+      src: 'assets/hero-produto.webp',
+      alt: 'Gato de pelo longo sendo escovado com a escova a vapor 3 em 1 UivoPets'
     },
 
     // Vídeo curto em loop do produto em uso (grave você mesmo — 6 a 10s,
@@ -93,8 +93,8 @@ const PRODUCT = {
     // Com src vazio, o hero usa a imagem acima. Com src preenchido, o vídeo
     // toca em loop e o poster aparece enquanto ele carrega.
     video: {
-      src: '',
-      poster: 'assets/placeholder-video.svg'
+      src: 'assets/hero-video.mp4',
+      poster: ''   // vazio = usa a foto do hero acima como primeiro quadro
     },
     cta: 'Comprar agora',
     selo: 'Compra 100% segura e garantida',
@@ -153,11 +153,10 @@ const PRODUCT = {
     base: 'Baseado em 221 avaliações do produto',
     verMais: 'Ver mais avaliações',
 
-    fotos: [
-      { src: 'assets/placeholder-avaliacao.svg', alt: 'Cliente usando a escova em um cachorro' },
-      { src: 'assets/placeholder-avaliacao.svg', alt: 'Cliente usando a escova em um gato' },
-      { src: 'assets/placeholder-avaliacao.svg', alt: 'Pet escovado com a escova UivoPets' }
-    ],
+    // Sem fotos de cliente. Lista vazia = o bloco some sozinho da pagina e a
+    // nota passa a ocupar o cartao inteiro. Se um dia chegarem fotos reais de
+    // clientes, e so adicionar { src, alt } aqui que o bloco volta.
+    fotos: [],
 
     // Textos LITERAIS do anúncio de origem — não reescreva, não embeleze.
     // A nota individual de cada um não veio na página salva; ficaram como 5
@@ -178,17 +177,17 @@ const PRODUCT = {
     apoio: 'Vapor, escovação e massagem de uma vez só — a higiene do seu pet em um passo, não em três.',
     itens: [
       {
-        imagem: { src: 'assets/placeholder-funcao.svg', alt: 'Vapor saindo da escova sobre a pelagem do pet' },
+        imagem: { src: 'assets/funcao-vapor.webp', alt: 'Escova a vapor UivoPets liberando vapor sobre a pelagem — funciona com água ou essência' },
         titulo: 'Vapor que solta o pelo',
         texto: 'O vapor umedece a pelagem enquanto você escova. O pelo morto se desprende com mais facilidade e fica preso na escova, em vez de levantar pela casa.'
       },
       {
-        imagem: { src: 'assets/placeholder-funcao.svg', alt: 'Escova recolhendo pelos soltos de um cachorro' },
+        imagem: { src: 'assets/funcao-escova.webp', alt: 'Dedo apertando o botão da escova enquanto ela recolhe os pelos soltos da pelagem' },
         titulo: 'Escova e recolhe',
         texto: 'As cerdas passam pela pelagem recolhendo o que já estava solto, em cães e gatos, do focinho ao rabo.'
       },
       {
-        imagem: { src: 'assets/placeholder-funcao.svg', alt: 'Pet relaxado durante a escovação' },
+        imagem: { src: 'assets/funcao-massagem.webp', alt: 'Cabeça da escova com 84 cerdas arredondadas de silicone, que massageiam sem machucar a pele' },
         titulo: 'Massagem que acalma',
         texto: 'O movimento sobre a pele vira massagem. Nas avaliações do produto, tutores de gato contam que os bichos deixaram escovar sem briga.'
       }
@@ -500,7 +499,7 @@ const PRODUCT = {
     $('#funcoes-lista').innerHTML = PRODUCT.funcionalidades.itens.map((f, i) => `
       <li class="funcao" data-revelar style="--atraso:${i}">
         <div class="funcao__midia">
-          <img src="${f.imagem.src}" alt="${f.imagem.alt}" loading="lazy" decoding="async" width="600" height="450">
+          <img src="${f.imagem.src}" alt="${f.imagem.alt}" loading="lazy" decoding="async" width="600" height="600">
           <span class="funcao__numero" aria-hidden="true">${i + 1}</span>
         </div>
         <h3 class="funcao__titulo">${f.titulo}</h3>

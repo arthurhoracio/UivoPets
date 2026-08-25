@@ -360,7 +360,9 @@ svg { display: block; }
    segundo peso na linha de baixo para criar hierarquia de verdade */
 .hero__titulo {
   margin-top: 16px;
-  font-size: clamp(2.6rem, 12.5vw, 4.4rem);
+  /* calibrado para a linha mais longa da manchete ("em todo canto.", 14
+     caracteres): acima disso o titulo vaza da tela no celular */
+  font-size: clamp(2.2rem, 11.5vw, 4.2rem);
   font-weight: 800;
   line-height: 1;
   letter-spacing: -.036em;
@@ -613,6 +615,12 @@ svg { display: block; }
 .avaliacoes__fotos li { overflow: hidden; border-radius: var(--r-sm); }
 .avaliacoes__fotos li:hover img { transform: scale(1.05); }
 
+/* Sem fotos de cliente (avaliacoes.fotos vazio): a lista some e a nota deixa
+   de ficar espremida em meia coluna — ocupa o cartao inteiro. Volta sozinho
+   no dia em que o array for preenchido. */
+.avaliacoes__fotos:empty { display: none; }
+.avaliacoes__topo:has(> .avaliacoes__fotos:empty) { grid-template-columns: 1fr; }
+
 .ver-mais {
   display: flex;
   align-items: center;
@@ -651,7 +659,9 @@ svg { display: block; }
 .funcao__midia { position: relative; overflow: hidden; border-radius: var(--r-sm); }
 .funcao__midia img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  /* as fotos do produto sao 1:1 e trazem texto proprio no topo — em 4/3 o
+     recorte comia a chamada de cada imagem */
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   background: var(--fundo);
   transition: transform .45s cubic-bezier(.2, .8, .3, 1);
@@ -660,7 +670,9 @@ svg { display: block; }
 
 .funcao__numero {
   position: absolute;
-  top: 10px;
+  /* embaixo, e nao em cima: as fotos do produto trazem a chamada no topo e o
+     numero batia em cima do texto */
+  bottom: 10px;
   left: 10px;
   display: grid;
   place-items: center;

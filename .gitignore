@@ -15,3 +15,6 @@ $RECYCLE.BIN/
 # Página do fornecedor salva do AliExpress — fonte de consulta, não vai pro site
 assets/*AliExpress.html
 assets/*AliExpress_files/
+
+# Fotos originais do produto (PNG pesado) — fonte para reexportar; o site usa os .webp em assets/
+assets/ProdutoFotos/
