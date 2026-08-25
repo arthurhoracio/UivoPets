@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+
+<!-- Title, description e imagem de compartilhamento vêm de PRODUCT.seo (script.js) -->
+<title>UivoPets</title>
+<meta name="description" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- =============================== HEADER =============================== -->
+<header class="cabecalho" id="cabecalho">
+  <div class="container cabecalho__linha">
+    <a class="logo" href="#topo" data-logo aria-label="UivoPets — página inicial"></a>
+
+    <button class="carrinho" id="btn-carrinho" type="button" aria-label="Ver carrinho">
+      <span class="carrinho__icone" data-icone="carrinho"></span>
+      <span class="carrinho__contador" id="carrinho-contador" aria-live="polite">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ================================ HERO ================================ -->
+  <section class="hero" id="topo">
+    <div class="container hero__grade">
+
+      <div class="hero__texto">
+        <span class="badge">
+          <span class="badge__icone" id="badge-icone" data-icone="uivo"></span>
+          <span data-texto="hero.badge"></span>
+        </span>
+
+        <h1 class="hero__titulo" data-html="hero.titulo"></h1>
+        <p class="hero__apoio" data-html="hero.texto"></p>
+      </div>
+
+      <!-- recebe a imagem OU o vídeo em loop, conforme PRODUCT.hero.video -->
+      <figure class="hero__midia" id="hero-midia"></figure>
+
+      <div class="hero__acao">
+        <ul class="beneficios" id="hero-beneficios"></ul>
+
+        <button class="btn btn--cta btn-comprar" type="button" data-texto="hero.cta"></button>
+
+        <p class="selo-seguro">
+          <span class="selo-seguro__icone" data-icone="cadeado"></span>
+          <span data-texto="hero.selo"></span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================== FAIXA DE CONFIANÇA ========================= -->
+  <section class="faixa" aria-label="Nossas garantias">
+    <ul class="container faixa__lista" id="faixa-confianca"></ul>
+  </section>
+
+  <!-- =============================== PREÇO ================================ -->
+  <section class="secao secao--respiro" aria-labelledby="preco-titulo">
+    <div class="container">
+      <div class="preco" data-revelar>
+        <div class="preco__valores">
+          <p class="preco__etiqueta">
+            <span data-texto="preco.etiqueta"></span>
+            <span class="preco__desconto" data-texto="preco.desconto"></span>
+          </p>
+          <p class="preco__de" data-texto="preco.de"></p>
+          <p class="preco__por" id="preco-titulo">
+            <span class="preco__moeda" data-texto="preco.moeda"></span><span class="preco__numero" data-texto="preco.por"></span>
+          </p>
+          <p class="preco__parcelas" data-html="preco.parcelamento"></p>
+        </div>
+
+        <div class="preco__acao">
+          <button class="btn btn--cta btn-comprar" type="button">
+            <span class="btn__icone" data-icone="carrinho"></span>
+            <span data-texto="preco.cta"></span>
+          </button>
+          <p class="selo-seguro selo-seguro--claro">
+            <span class="selo-seguro__icone" data-icone="cadeado"></span>
+            <span data-texto="preco.selo"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= AVALIAÇÕES ============================= -->
+  <section class="secao" aria-labelledby="avaliacoes-titulo">
+    <div class="container">
+      <div class="secao__cabecalho" data-revelar>
+        <span class="eyebrow" data-texto="avaliacoes.eyebrow"></span>
+        <h2 class="titulo-secao" id="avaliacoes-titulo" data-html="avaliacoes.titulo"></h2>
+      </div>
+
+      <div class="cartao avaliacoes" data-revelar>
+        <div class="avaliacoes__topo">
+
+          <div class="avaliacoes__nota">
+            <div class="estrelas" id="avaliacoes-estrelas"></div>
+            <p class="avaliacoes__media">
+              <span data-texto="avaliacoes.nota"></span>
+              <span class="avaliacoes__de" data-texto="avaliacoes.notaMaxima"></span>
+            </p>
+            <p class="avaliacoes__base" data-texto="avaliacoes.base"></p>
+          </div>
+
+          <ul class="avaliacoes__fotos" id="avaliacoes-fotos"></ul>
+        </div>
+
+        <button class="ver-mais" id="btn-ver-avaliacoes" type="button" aria-expanded="false" aria-controls="avaliacoes-lista">
+          <span data-texto="avaliacoes.verMais"></span>
+          <span class="ver-mais__seta" data-icone="chevron"></span>
+        </button>
+
+        <ul class="avaliacoes__lista" id="avaliacoes-lista" hidden></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== FUNCIONALIDADES ========================== -->
+  <section class="secao secao--respiro" aria-labelledby="funcoes-titulo">
+    <div class="container">
+      <div class="secao__cabecalho" data-revelar>
+        <span class="eyebrow" data-texto="funcionalidades.eyebrow"></span>
+        <h2 class="titulo-secao" id="funcoes-titulo" data-html="funcionalidades.titulo"></h2>
+        <p class="apoio-secao" data-texto="funcionalidades.apoio"></p>
+      </div>
+
+      <ol class="funcoes" id="funcoes-lista"></ol>
+    </div>
+  </section>
+
+  <!-- =============================== SELOS ================================ -->
+  <section class="secao" aria-label="Garantias da loja">
+    <div class="container">
+      <ul class="selos" id="selos-lista" data-revelar></ul>
+    </div>
+  </section>
+
+  <!-- ================================ FAQ ================================= -->
+  <section class="secao secao--respiro" aria-labelledby="faq-titulo">
+    <div class="container">
+      <div class="secao__cabecalho" data-revelar>
+        <span class="eyebrow" data-texto="faq.eyebrow"></span>
+        <h2 class="titulo-secao" id="faq-titulo" data-texto="faq.titulo"></h2>
+      </div>
+
+      <div class="faq" id="faq-lista"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================================ RODAPÉ ================================ -->
+<footer class="rodape">
+  <div class="container rodape__grade">
+
+    <div class="rodape__marca">
+      <span class="logo" data-logo="claro"></span>
+      <p class="rodape__texto" data-texto="rodape.texto"></p>
+    </div>
+
+    <div class="rodape__coluna">
+      <h2 class="rodape__titulo" data-texto="rodape.tituloContato"></h2>
+      <ul class="rodape__contatos" id="rodape-contatos"></ul>
+    </div>
+
+    <div class="rodape__coluna">
+      <h2 class="rodape__titulo" data-texto="rodape.tituloRedes"></h2>
+      <ul class="redes" id="rodape-redes"></ul>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <p class="rodape__direitos" data-texto="rodape.direitos"></p>
+  </div>
+</footer>
+
+<!-- ========================= ELEMENTOS FLUTUANTES ========================= -->
+<a class="whatsapp-flutuante" id="whatsapp-flutuante" href="#" target="_blank" rel="noopener"
+   aria-label="Falar no WhatsApp">
+  <span data-icone="whatsapp"></span>
+</a>
+
+<!-- Barra de compra fixa no mobile — liga/desliga em PRODUCT.opcoes.ctaFixoMobile -->
+<div class="barra-fixa" id="barra-fixa" hidden>
+  <div class="barra-fixa__info">
+    <span class="barra-fixa__de" data-texto="preco.de"></span>
+    <span class="barra-fixa__preco">
+      <span data-texto="preco.moeda"></span> <span data-texto="preco.por"></span>
+    </span>
+  </div>
+  <button class="btn btn--cta btn--compacto btn-comprar" type="button" data-texto="preco.cta"></button>
+</div>
+
+
+<!-- ======================================================================= -->
+<!--                                                                         -->
+<!--   >>>  COLE AQUI O SCRIPT DO APP "BUY BUTTON" DA NUVEMSHOP  <<<         -->
+<!--                                                                         -->
+<!--   O app gera um trecho parecido com:                                    -->
+<!--                                                                         -->
+<!--     <script src="https://.../buybutton.js"                              -->
+<!--             data-store="SEU_ID" data-product="SEU_PRODUTO"></script>     -->
+<!--                                                                         -->
+<!--   Cole exatamente nesta linha, ANTES do script.js abaixo.               -->
+<!--   Todos os botões de compra da página já têm a classe .btn-comprar.     -->
+<!--   Passo a passo completo: README.md, seção "Nuvemshop".                 -->
+<!--                                                                         -->
+<!-- ======================================================================= -->
+
+
+<script src="script.js"></script>
+</body>
+</html>
