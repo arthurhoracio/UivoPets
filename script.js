@@ -44,13 +44,13 @@ const PRODUCT = {
      whatsapp: só números, com 55 + DDD. Ex: 5511987654321
   ------------------------------------------------------------------ */
   contato: {
-    whatsapp: '5511987654321',
+    whatsapp: '5592984188792',
     whatsappMensagem: 'Olá! Vim pelo site e quero saber mais sobre o produto.',
-    whatsappVisivel: '(11) 98765-4321',
-    email: 'contato@uivopets.shop',
-    instagram: 'https://instagram.com/',
-    facebook: 'https://facebook.com/',
-    tiktok: 'https://tiktok.com/'
+    whatsappVisivel: '(92) 98418-8792',
+    email: 'uivopets@gmail.com',
+    instagram: 'https://www.instagram.com/uivopets/',
+    facebook: '',
+    tiktok: 'https://www.tiktok.com/@uivopets'
   },
 
   /* ------------------------------------------------------------------
