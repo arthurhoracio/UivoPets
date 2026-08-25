@@ -110,6 +110,7 @@ const PRODUCT = {
      6. FAIXA DE CONFIANÇA (logo abaixo do hero)
   ------------------------------------------------------------------ */
   confianca: [
+    { icone: 'brilho', titulo: 'Frete grátis', texto: 'Para todo o Brasil' },
     { icone: 'caminhao', titulo: 'Envio do Brasil', texto: 'Sem espera de importação' },
     { icone: 'escudo', titulo: 'Pagamento seguro', texto: 'Ambiente protegido' },
     { icone: 'troca', titulo: 'Troca fácil', texto: 'Até 7 dias após o recebimento' }

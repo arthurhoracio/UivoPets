@@ -482,9 +482,18 @@ svg { display: block; }
 }
 .faixa__texto { display: block; color: var(--suave); font-size: .82rem; line-height: 1.35; }
 
+/* sao 4 itens: em telas medias eles ficam 2x2, e so viram uma linha unica
+   quando ha largura suficiente para os quatro sem espremer o texto */
 @media (min-width: 760px) {
-  .faixa__lista { grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .faixa__lista { grid-template-columns: repeat(2, 1fr); gap: 16px 0; }
   .faixa__item { padding-inline: 22px; }
+  .faixa__item:nth-child(odd) { padding-left: 0; }
+  .faixa__item:nth-child(even) { border-left: 1px solid var(--linha); }
+}
+
+@media (min-width: 1020px) {
+  .faixa__lista { grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .faixa__item:nth-child(odd) { padding-left: 22px; }
   .faixa__item + .faixa__item { border-left: 1px solid var(--linha); }
   .faixa__item:first-child { padding-left: 0; }
 }
