@@ -123,10 +123,12 @@ const PRODUCT = {
   ------------------------------------------------------------------ */
   preco: {
     etiqueta: 'Preço de lançamento',
-    // "de" e "desconto" vazios de propósito: você ainda não praticou um preço
-    // anterior. Só preencha depois de ter vendido mais caro de verdade (CDC).
-    desconto: '',
-    de: '',
+    // Âncora visual: R$ 57,99 aparece riscado só para dar contraste com o
+    // preço real. Não é um preço praticado — decisão sua, ciente do CDC 37.
+    // O checkout e os dados estruturados seguem em 45,99, que é o "por".
+    // Para tirar o gatilho, é só voltar os dois campos abaixo para ''.
+    desconto: '20% OFF',
+    de: 'R$ 57,99',
     moeda: 'R$',
     por: '45,99',
     parcelamento: 'ou <strong>3x</strong> de <strong>R$ 15,33</strong> sem juros',

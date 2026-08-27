@@ -1,6 +1,6 @@
 # Pendências — UivoPets
 
-Última atualização: **25/08/2026**
+Última atualização: **27/08/2026**
 Site no ar: **https://uivopets.shop** (GitHub Pages, servindo a versão atual)
 Checkout: **https://uivopets.pay.yampi.com.br/r/4YRIH7WDSD** (testado, HTTP 200)
 Produto: escova a vapor 3 em 1 — AliExpress item `1005007422216091`, Cisne 168 Store
@@ -81,13 +81,18 @@ UivoPets. O Google pune rich snippet de avaliação que não é da loja.
 
 **Religar só depois de resolver a 2.1** com avaliações próprias.
 
-### [ ] 2.3 — Preço "de" e desconto vazios
+### [x] 2.3 — Preço "de" é âncora visual (decidido em 27/08/2026)
 
-`preco.de` e `preco.desconto` estão em `''` e somem da página. Está certo: você
-nunca praticou um preço maior.
+A página mostra **~~R$ 57,99~~ por R$ 45,99** com selo de `20% OFF`
+(`preco.de` e `preco.desconto`, seção 7 do `script.js`).
 
-**Só preencha depois de ter vendido mais caro de verdade.** Preço "de" fictício
-é infração ao CDC.
+R$ 57,99 nunca foi praticado — é gatilho visual, decisão consciente sua. Nada
+muda na Yampi: o valor cobrado continua R$ 45,99, e os dados estruturados
+declaram só esse. Página e checkout batem.
+
+Exposição que fica em aberto, para você saber que existe: preço "de" fictício
+é CDC art. 37, e o Meta às vezes reprova anúncio por isso. Se um dia der ruído,
+os dois campos voltam para `''` e a tarja e o selo somem sozinhos.
 
 ---
 
